@@ -53,9 +53,10 @@ namespace WebApplication1.Controllers
         // GET: Tours/Create
         public IActionResult Create(int hotelId)
         {
-            // ViewData["CountryId"] = new SelectList(_context.Countries, "Id", "CountryName");
+            
             ViewBag.HotelId = hotelId;
             ViewBag.HotelName = _context.Hotels.Where(c => c.Id == hotelId).FirstOrDefault().HotelName;
+            ViewData["ManegerId"] = new SelectList(_context.Managers, "Id", "Id");
             return View();
         }
 

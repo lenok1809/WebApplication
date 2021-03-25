@@ -12,7 +12,7 @@
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            
+
             <div class="form-group">
                 <label asp-for="TourName" class="control-label"></label>
                 <input asp-for="TourName" class="form-control" />
@@ -25,7 +25,8 @@
             </div>
             <div class="form-group">
                 <label asp-for="ManegerId" class="control-label"></label>
-                <select asp-for="ManegerId" class ="form-control" asp-items="ViewBag.ManegerId"></select>
+                <input asp-for="ManegerId" class="form-control" />
+                <span asp-validation-for="ManegerId" class="text-danger"></span>
             </div>
             <input type="hidden" value="@ViewBag.HotelId" name="HotelId" />
             <div class="form-group">

@@ -46,7 +46,7 @@ namespace WebApplication1.Controllers
                 return NotFound();
             }
 
-            return View(voucher);
+            return RedirectToAction("Index", "Tourists", new { id = voucher.Id });
         }
 
         // GET: Vouchers/Create
